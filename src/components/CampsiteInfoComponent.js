@@ -30,9 +30,19 @@ export class CampsiteInfoComponent extends Component {
 
                     <h4>Comments</h4>
 
-
                   </div>
+                  <div className="row">
+                      {comments.map(comment => {
+                          return(
+                              <div>
+                                <p>{comment.text}<br />{comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</p>
 
+                              </div>
+
+
+                          );
+                      })}
+                  </div>
                 </div>
             )
         }
