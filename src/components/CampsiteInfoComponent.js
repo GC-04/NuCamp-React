@@ -1,5 +1,6 @@
 import React from 'react';
-import { Card, CardImg,  CardText, CardBody, CardTitle, Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
+import { Card, CardImg,  CardText, CardBody, CardTitle,
+   Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 import { Breadcrumb, BreadcrumbItem, Label, Col, Row  } from 'reactstrap';
 import { Control, LocalForm, Errors } from 'react-redux-form';
 import { Link } from 'react-router-dom';
@@ -149,7 +150,6 @@ function RenderCampsite({campsite}) {
                 }
             }
 
-
             function CampsiteInfo(props) {
                 if (props.isLoading) {
                     return (
@@ -201,4 +201,4 @@ function RenderCampsite({campsite}) {
 
                       }
 
-export default CampsiteInfo
+export default CampsiteInfo;
