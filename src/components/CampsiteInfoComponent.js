@@ -200,4 +200,4 @@ function RenderCampsite({campsite}) {
 
                       }
 
-      export default CampsiteInfo
+export default CampsiteInfo
