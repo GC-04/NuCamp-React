@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 import Main from './components/MainComponent';
 import { BrowserRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import { configureStore } from './redux/configureStore';
+import { ConfigureStore } from './redux/configureStore';
 import './App.css';
 
-const store = configureStore();
-
+const store = ConfigureStore();
 
 class App extends Component {
 
@@ -22,5 +21,6 @@ class App extends Component {
         );
     }
 }
+
 
 export default App;

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { PARTNERS } from '../shared/partners'
+import { PARTNER } from '../shared/partner'
 
 function RenderPartner({partner}) {
     if(partner) {
@@ -16,15 +16,11 @@ function RenderPartner({partner}) {
             </React.Fragment>
 
         )
-
     }
  //Close to Var but div
-
 }
 
-
 function About(props) {
-
 
     const partners = props.partners.map(partner => {
         return (
@@ -33,8 +29,6 @@ function About(props) {
             </Media>
         );
     });
-
-
 
     return (
         <div className="container">
