@@ -17,8 +17,8 @@ function RenderPartner({partner}) {
 
         )
     }
- //Close to Var but div
 }
+
 
 function About(props) {
 

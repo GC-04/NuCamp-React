@@ -4,10 +4,11 @@ import CampsiteInfo from './CampsiteInfoComponent';
 import Header from './HeaderComponent';
 import Footer from './Footer Component';
 import Home from './HomeComponent';
+import About from './AboutComponent';
 import Contact from './ContactComponent';
 import { Switch, Route, Redirect, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import About from './AboutComponent';
+
 import {actions} from 'react-redux-form';
 import { postComment, fetchCampsites, fetchComments, fetchPromotions } from '../redux/ActionCreators';
 import { TransitionGroup, CSSTransition } from 'react-transition-group';
@@ -20,7 +21,6 @@ const mapStateToProps = (state) => {
         promotions: state.promotions
     }
 }
-
 
 const mapDispatchToProps = {
     postComment: (campsiteId, rating, author, text) => (postComment(campsiteId, rating, author, text)),
@@ -69,7 +69,9 @@ class Main extends Component {
         return (
             <div>
                 <Header />
+
                 <TransitionGroup>
+
                     <CSSTransition key={this.props.location.key} classNames="page" timeout={300}>
                         <Switch>
                             <Route path='/home' component={HomePage} />
@@ -80,7 +82,9 @@ class Main extends Component {
                             <Redirect to='/home' />
                         </Switch>
                     </CSSTransition>
+
                 </TransitionGroup>
+
                 <Footer />
             </div>
         );
