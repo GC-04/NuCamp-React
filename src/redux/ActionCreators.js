@@ -77,7 +77,7 @@ export const addPartners = partner => ({
   type: ActionTypes.ADD_PARTNERS,
   payload: partner
 });
-
+// postFeedback
 export const postComment = (campsiteId, rating, author, text) => dispatch => {
 
   const newComment = {
@@ -174,9 +174,11 @@ export const fetchPartners = () => dispatch => {
       .catch(error => dispatch(partnersFailed(error.message)));
 };
 
+
 export const partnersLoading = () => ({
   type: ActionTypes.PARTNERS_LOADING
 });
+
 
 export const partnersFailed = errMess => ({
   type: ActionTypes.PARTNERS_FAILED,
